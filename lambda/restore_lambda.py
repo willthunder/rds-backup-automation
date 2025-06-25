@@ -8,7 +8,7 @@ def lambda_handler(event, context):
     rds.restore_db_instance_from_db_snapshot(
         DBInstanceIdentifier=new_instance_id,
         DBSnapshotIdentifier=snapshot_id,
-        DBInstanceClass='db.t3.micro',
+        DBInstanceClass='db.t2.micro',
         PubliclyAccessible=True
     )
 
