@@ -9,7 +9,7 @@ def restore_from_snapshot():
     response = rds.restore_db_instance_from_db_snapshot(
         DBInstanceIdentifier=NEW_DB_INSTANCE_ID,
         DBSnapshotIdentifier=SNAPSHOT_ID,
-        DBInstanceClass='db.t3.micro',
+        DBInstanceClass='db.t2.micro',
         PubliclyAccessible=True
     )
     print(f"Restore initiated for: {NEW_DB_INSTANCE_ID}")
